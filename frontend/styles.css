@@ -1,0 +1,81 @@
+body{
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    background-image: url("https://images.pexels.com/photos/16666915/pexels-photo-16666915.jpeg");
+    background-position-y: 45%;
+    background-position-x: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+body h1{
+    text-align: center;
+}
+#taskInput{
+    color: black;
+    font-size: 12px;
+    background-color: white;
+    border: none;
+    height: 25px;
+    width: 250px;
+    border-radius: 3px;
+
+}
+#taskButton{
+    color: black;
+    margin-left: 24px;
+    font-size: 12px;
+    background-color: white;
+    border: none;
+    height: 27px;
+    width: 117px;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+#taskButton:hover{
+    background-color: #008a12;
+    color: white;
+    transition: 0.5s;
+}
+.container{
+    width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    box-shadow: 0px 0px 0px black;
+    justify-content: space-between;
+}
+
+.task{
+    margin-bottom: 5px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+    height: 49px;
+    border-radius: 3px;
+}
+
+.task-text{
+    flex-grow: 1;
+    color: black;
+    margin-left: 12px;
+}
+
+.task-delete{
+    background-color: #bd03032f;
+    color: black;
+    border: none;
+    padding: 16px 20px;
+    cursor: pointer;
+    border-radius: 0px 3px 3px 0px;
+    transition: 0.5s ease;
+}
+
+.task-delete:hover{
+    background-color: #bd0303;
+    color: white;
+    transition: 0.5s ease;
+}
