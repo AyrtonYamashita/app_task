@@ -47,13 +47,25 @@ body h1{
     justify-content: space-between;
 }
 
+.complete-task {
+    margin-bottom: 5px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(211, 255, 226);
+    height: 49px;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
 .task{
     margin-bottom: 5px;
     margin-top: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: aliceblue;
+    background-color: white;
     height: 49px;
     border-radius: 3px;
 }
@@ -63,17 +75,35 @@ body h1{
     color: black;
     margin-left: 12px;
 }
-
 .task-delete{
     background-color: #bd03032f;
     color: black;
     border: none;
-    padding: 16px 20px;
+    padding: 16px 16px;
     cursor: pointer;
     border-radius: 0px 3px 3px 0px;
     transition: 0.5s ease;
 }
-
+.task-check{
+    background-color: #008f0748;
+    color: gray;
+    border: none;
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.order-task{
+    color: gray;
+    border: none;
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.task-check:hover{
+    background-color: #008a12;
+    color: white;
+    transition: 0.5s ease;
+}
 .task-delete:hover{
     background-color: #bd0303;
     color: white;
