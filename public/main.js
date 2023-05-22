@@ -12,7 +12,7 @@ function addTask(){
             check: false
         };
         saveTask(task).then(() => {
-            renderTask(task);
+            renderTask();
             taskInput.value = '';
         })
         .catch((error) => {
@@ -21,10 +21,7 @@ function addTask(){
         tasks.push(task);
         input.value = "";
     }
-    console.log(tasks);
 }
-
-
 
 // Função para mostrar as tarefas na lista
 function renderTask(){
@@ -45,6 +42,19 @@ function renderTask(){
         <button onclick="confirmDeleteTask(${task.id})" class="task-delete">🗑️</button>`;
         taskList.appendChild(taskItem);
     });
+}
+
+// Função para buscar as tarefas do servidor
+function fetchTask(){
+    const taskList = document.getElementById("taskList");
+    taskList.innerHTML = "";
+    fetch("/tasks").then((res) => {
+        res.json().then((dados) => {
+            dados.map((tarefa) => {
+                console.log(tarefa)
+            })
+        })
+    })
 }
 
 // Função para ordenar uma tarefa
@@ -73,46 +83,11 @@ function confirmDeleteTask(taskId){
         removeTask(taskId);
     }
 }
-
-function removeTask(taskId) {
-    const taskElement = document.getElementById(taskId);
-    if (taskElement) {
-      taskElement.remove();
-    }
-  }
-
-// // Função para excluir uma tarefa
-// function deleteTask(taskId){
-//     tasks = tasks.filter((task) => task.id !== taskId);
-//     renderTask();
-// }
-
-// Função para buscar as tarefas do servidor
-async function fetchTasks() {
-    try {
-      const response = await fetch('/tasks');
-      if (!response.ok) {
-        throw new Error('Failed to fetch tasks');
-      }
-      const tasks = await response.json();
-      return tasks;
-    } catch (error) {
-      throw new Error(error.message);
-    }
+// Função para excluir uma tarefa
+function removeTask(taskId){
+    tasks = tasks.filter((task) => task.id !== taskId);
+    renderTask();
 }
-
-// Função para carregar as tarefas ao carregar a página
-async function loadTasks() {
-    try {
-      const tasks = await fetchTasks();
-      tasks.forEach((task) => {
-        renderTask(task);
-      });
-    } catch (error) {
-      console.error(error);
-    }
-}
-
 
 async function saveTask(task){
     try {
@@ -146,6 +121,4 @@ async function deleteTask(taskId){
         throw new Error(error.message);
     }
 }
-
-loadTasks();
 renderTask();
