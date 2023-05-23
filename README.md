@@ -30,3 +30,6 @@ salvas mesmo a pagina sendo atualizada.</p>
 [ ] Definir a função que lê todas tarefas do arquivo JSON e renderize na tela.
 
 [ ] Definir a função que exclui as tarefas do arquivo JSON e renderize na tela.
+
+
+Corrigir o Index de cada objeto no array no arquivo Json!!!!!
