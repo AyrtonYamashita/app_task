@@ -17,19 +17,16 @@ salvas mesmo a pagina sendo atualizada.</p>
 <h3 align="center">O que falta para conclusão?</h3>
 <p align="center">Boa parte do projeto já foi construído porém ainda pode sofrer alterações. Todas as metas para o projeto:</p>
 
-[x] Construir uma interface frontend simples porém intuitiva.
+    [x] Construir uma interface frontend simples porém intuitiva.
 
-[x] Construir o CSS de forma organizada e concisa.
+    [x] Construir o CSS de forma organizada e concisa.  
 
-[x] Definir os scripts responsáveis pelas requisições HTTP GET, POST e DELETE.
+    [x] Definir os scripts responsáveis pelas requisições HTTP GET, POST e DELETE.
 
-[x] Definir rotas para para requisição.
+    [x] Definir rotas para para requisição.
 
-[x] Construir o backend que envia todas as tarefas ao arquivo JSON.
+    [x] Construir o backend que envia todas as tarefas ao arquivo JSON.
 
-[ ] Definir a função que lê todas tarefas do arquivo JSON e renderize na tela.
+    [x] Definir a função que lê todas tarefas do arquivo JSON e atualize na tela.
 
-[ ] Definir a função que exclui as tarefas do arquivo JSON e renderize na tela.
-
-
-Corrigir o Index de cada objeto no array no arquivo Json!!!!!
+    [x] Definir a função que exclui as tarefas do arquivo JSON e atualize na tela.
