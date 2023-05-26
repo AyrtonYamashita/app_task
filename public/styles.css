@@ -2,8 +2,9 @@ body{
     font-family: 'Bebas Neue', sans-serif;
     color: white;
     background-image: url("https://images.pexels.com/photos/16666915/pexels-photo-16666915.jpeg");
-    background-position-y: 45%;
-    background-position-x: 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,11 +17,16 @@ body h1{
     color: black;
     font-size: 12px;
     background-color: white;
+    text-align: center;
     border: none;
     height: 25px;
     width: 250px;
     border-radius: 3px;
 
+}
+#taskInput:focus, input:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
 }
 #taskButton{
     color: black;
@@ -46,7 +52,6 @@ body h1{
     box-shadow: 0px 0px 0px black;
     justify-content: space-between;
 }
-
 .complete-task {
     margin-bottom: 5px;
     margin-top: 12px;
@@ -58,7 +63,6 @@ body h1{
     border-radius: 3px;
     transition: 0.5s;
 }
-
 .task{
     margin-bottom: 5px;
     margin-top: 12px;
@@ -69,14 +73,13 @@ body h1{
     height: 49px;
     border-radius: 3px;
 }
-
 .task-text{
     flex-grow: 1;
     color: black;
     margin-left: 12px;
 }
 .task-delete{
-    background-color: #bd03032f;
+    background-color: #ffc3c3;
     color: black;
     border: none;
     padding: 16px 16px;
@@ -85,12 +88,13 @@ body h1{
     transition: 0.5s ease;
 }
 .task-check{
-    background-color: #008f0748;
+    background-color: #d9fcdb;
     color: gray;
     border: none;
     padding: 16px 20px;
     cursor: pointer;
     transition: 0.5s ease;
+    border-radius: 3px 0px 0px 3px;
 }
 .order-task{
     color: gray;
